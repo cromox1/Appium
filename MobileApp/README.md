@@ -20,8 +20,8 @@ To run tests (example) :
 
 To run specific test from main test set :
 
-* py.test.exe -v -s tests/ChessAndroid/chessfree_tests.py::LoginTests::test_FirewallSettingBlock
-* py.test.exe -v -s tests/ChessAndroid/chessfree_tests.py::LoginTests::test_FirewallSettingOff
+* py.test.exe -v -s tests/ChessAndroid/chessfree_tests.py::ChessFreeTests::test_1goto_ChessFree
+* py.test.exe -v -s tests/ChessAndroid/chessfree_tests.py::LoginTests::test_1goto_ChessFree
 
 To run all tests as a test suite :
 

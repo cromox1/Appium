@@ -2,7 +2,7 @@
 
 ## My Appium projects
 
-1) MobileApp - **In-Progress** (40%)
+1) MobileApp - **In-Progress** (35%)
 2) BrowserStack - - **In-Progress** (0% - Not start yet)
 
 ### Note

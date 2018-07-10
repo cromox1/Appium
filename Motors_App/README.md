@@ -9,13 +9,13 @@ Motors.co.uk is a car search portal that aims to make car buying, selling and ow
 
 Motors Automation Framework consise these directories:
 
-1) apps
+1) apps (to store MobileApp's .apk files)
 2) base
 3) configfiles
 4) pages
 5) tests
 6) utilities
-7) screenshots
+7) screenshots (create by code automatically if error/fault happens)
 
 To run tests (example) :
 
@@ -27,3 +27,7 @@ To run all tests as a test suite :
 
 * py.test tests/test_suite_Motors.py --device nexus6
 * py.test -v tests/test_suite_Motors.py --device nexus6
+
+DEFAULT values (if didn't supply) :
+
+'--device' = 'Android Nexus S API 23'

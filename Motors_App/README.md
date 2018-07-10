@@ -19,7 +19,7 @@ Motors Automation Framework consise these directories:
 
 To run tests (example) :
 
-* py.test -s -v tests/home/login_tests.py --browser firefox
+* py.test -s -v tests/motors/motors_base_tests.py --device default
 
 (all tests in 'tests' directory -- to run one by one)
 

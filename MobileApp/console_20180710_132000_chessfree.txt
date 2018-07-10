@@ -1,0 +1,68 @@
+PC-TALIBR2+cromox@PC-TALIBR2 /cygdrive/c/Users/cromox/Desktop/newselenium/UDEMY/MobileApp_Appium
+$ py.test.exe -v -s tests/ChessAndroid/chessfree_tests.py > consoleoutput1.txt 2>&1
+
+PC-TALIBR2+cromox@PC-TALIBR2 /cygdrive/c/Users/cromox/Desktop/newselenium/UDEMY/MobileApp_Appium
+$ cat consoleoutput1.txt
+
+============================= test session starts =============================
+platform win32 -- Python 3.6.1, pytest-3.4.2, py-1.5.3, pluggy-0.6.0 -- c:\tools\python36\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.6.1', 'Platform': 'Windows-7-6.1.7601-SP1', 'Packages': {'pytest': '3.4.2', 'py': '1.5.3', 'pluggy': '0.6.0'}, 'Plugins': {'metadata': '1.7.0', 'html': '1.17.0'}, 'JAVA_HOME': 'C:\\Program Files\\Java\\jdk8u172'}
+rootdir: C:\Users\cromox\Desktop\newselenium\UDEMY\MobileApp_Appium, inifile:
+plugins: metadata-1.7.0, html-1.17.0
+collecting ... collected 2 items
+
+tests/ChessAndroid/chessfree_tests.py::ChessFreeTests::test_1goto_ChessFree 
+
+== > RUNNING ONE TIME SETUP < ==
+
+
+Python Version = 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 18:41:36) [MSC v.1900 64 bit (AMD64)]
+
+DEVICE = default
+
+
+DES_CAPS = {'platformName': 'Android', 'platformVersion': '6.0', 'deviceName': 'roslitest_NexusS_API_23'}
+
+
+DRIVER = <appium.webdriver.webdriver.WebDriver (session="18ad4a97-e6d2-4559-94c1-a53b8f72e2e7")>
+
+
+----- > request.cls is not None
+
+
+EVERY TESTS SETUP
+
+
+--- > RUNNING METHOD LEVEL SETUP < ---
+
+
+TEST 1 = test_1goto_ChessFree
+PASSED
+
+--- > RUNNING METHOD LEVEL TEARDOWN < ---
+
+
+
+tests/ChessAndroid/chessfree_tests.py::ChessFreeTests::test_2goto_ChessFree 
+
+EVERY TESTS SETUP
+
+
+--- > RUNNING METHOD LEVEL SETUP < ---
+
+
+TEST 2 = test_2goto_ChessFree
+PASSED
+
+--- > RUNNING METHOD LEVEL TEARDOWN < ---
+
+
+
+
+== > RUNNING ONE TIME TEARDOWN < ==
+
+
+
+
+========================== 2 passed in 38.07 seconds ==========================

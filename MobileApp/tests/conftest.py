@@ -2,28 +2,37 @@ __author__ = 'cromox'
 
 import pytest
 import sys
-from base.webdriverfactory import WebDriverFactory as mobiledesktop
+from base.screendriverfactory import ScreenDriverFactory as mobilescreen
 
 @pytest.yield_fixture()
 def setUp():
-    print("\n--- > Running method level setUp")
+    print("\n\n--- > RUNNING METHOD LEVEL SETUP < ---\n\n")
     yield
-    print("\n--- > Running method level tearDown")
+    print("\n\n--- > RUNNING METHOD LEVEL TEARDOWN < ---\n\n")
 
 @pytest.yield_fixture(scope="class")
 def oneTimeSetUp(request, device):
-    print("\n== > Running one time setUp")
+    print("\n\n== > RUNNING ONE TIME SETUP < ==\n\n")
     print('Python Version = ' + sys.version)
 
-    wdf = mobiledesktop(device)
-    driver = wdf.getWebDriverInstance()
+    sdf = mobilescreen(device)
+    print('\nDEVICE = ' + str(device) + '\n')
 
+    ##############
+    #
+    mobileapp = {'appPackage': 'com.android.browser', 'appActivity': '.BrowserActivity'}
+
+    driver = sdf.getScreenDriverInstance(mobileapp)
+
+    print('\nDRIVER = ' + str(driver) + '\n')
     if request.cls is not None:
+        print('\n----- > request.cls is not None')
         request.cls.driver = driver
+    ##############
 
     yield
 
-    print("\n== > Running one time tearDown")
+    print("\n\n== > RUNNING ONE TIME TEARDOWN < ==\n\n")
 
 def pytest_addoption(parser):
     parser.addoption("--device")

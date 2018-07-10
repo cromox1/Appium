@@ -31,3 +31,4 @@ To run all tests as a test suite :
 DEFAULT values (if didn't supply) :
 
 '--device' = 'Android Nexus S API 23'
+

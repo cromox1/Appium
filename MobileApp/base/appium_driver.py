@@ -24,7 +24,7 @@ class AppiumDriver():
         """
         masani = datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f")
         # fileName = resultMessage + "." + str(round(time.time()*1000)) + ".png"
-        fileName = resultMessage.replace(" ","_") + "_" + masani + ".png"
+        fileName = masani + "_" + resultMessage.replace(" ","_").replace("_verified", "") + ".png"
         screenshotDirectory = "..\screenshots\\"
         relativeFileName = screenshotDirectory + fileName
         currentDirectory = os.path.dirname(__file__)

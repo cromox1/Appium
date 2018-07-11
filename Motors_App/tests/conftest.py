@@ -16,17 +16,14 @@ def oneTimeSetUp(request, device):
     print('Python Version = ' + sys.version)
 
     sdf = mobilescreen(device)
-    print('\nDEVICE = ' + str(device) + '\n')
-
+    # print('\nDEVICE = ' + str(device) + '\n')
     ##############
     # General Device just to login Mobile Home Screen = Browser
     mobileapp = {'appPackage': 'com.android.browser', 'appActivity': '.BrowserActivity'}
-
     driver = sdf.getScreenDriverInstance(mobileapp)
-
-    print('\nDRIVER = ' + str(driver) + '\n')
+    # print('\nDRIVER = ' + str(driver) + '\n')
     if request.cls is not None:
-        print('\n----- > request.cls is not None')
+        # print('\n----- > request.cls is not None')
         request.cls.driver = driver
     ##############
 

@@ -23,11 +23,11 @@ class ScreenDriverFactory():
 
     def mobileDeviceParameter(self, device):
         self.desired_caps = {}
-        if device == 'Nexus S API 23' or device == 'default' or device == 'test1':
+        if device == 'test1' or device == 'Nexus S API 23' or device == 'default' or device is None:
             self.desired_caps['platformName'] = 'Android'
             self.desired_caps['platformVersion'] = '6.0'
             self.desired_caps['deviceName'] = 'roslitest_NexusS_API_23'
-        elif device == 'Galaxy Nexus API 23' or device == 'galaxy' or device == 'test2':
+        elif device == 'test2' or device == 'Galaxy Nexus API 23' or device == 'galaxy':
             self.desired_caps['platformName'] = 'Android'
             self.desired_caps['platformVersion'] = '6.0'
             self.desired_caps['deviceName'] = 'roslitest2_Galaxy_Nexus_API_23'

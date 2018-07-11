@@ -1,0 +1,19 @@
+11/07/2018 04:10:55 PM - MotorsBase - INFO: Element not found - locator (//*[@class='android.webkit.WebView' and @index='0']) + locatorType (xpath)
+11/07/2018 04:10:55 PM - MotorsBase - INFO: Element not present - locator (//*[@class='android.webkit.WebView' and @index='0']) + locatorType (xpath)
+11/07/2018 04:10:55 PM - MotorsBase - INFO: Element not found - locator (//*[@class='android.view.View' and @index='5']) + locatorType (xpath)
+11/07/2018 04:10:55 PM - MotorsBase - INFO: Element not present - locator (//*[@class='android.view.View' and @index='5']) + locatorType (xpath)
+11/07/2018 04:10:55 PM - MotorsBaseTests - INFO: test_1goto_MotorsMainUI started
+11/07/2018 04:10:55 PM - MotorsBase - INFO: Element not found - locator (//*[@class='android.view.View' and @index='8']) + locatorType (xpath)
+11/07/2018 04:10:55 PM - MotorsBase - INFO: Element not present - locator (//*[@class='android.view.View' and @index='8']) + locatorType (xpath)
+11/07/2018 04:10:55 PM - TestStatus - ERROR: ### VERIFICATION FAILED -- Smart Search START button verified's ERROR
+11/07/2018 04:10:56 PM - TestStatus - INFO: Screenshot save to directory: C:\Users\cromox\Desktop\newselenium\UDEMY\Motors_App\base\..\screenshots\20180711_161055_477720_Smart_Search_START_button.png
+11/07/2018 04:10:56 PM - MotorsBase - INFO: Element not found - locator (//*[@class='android.webkit.WebView' and @index='3']) + locatorType (xpath)
+11/07/2018 04:10:56 PM - MotorsBase - INFO: Element not present - locator (//*[@class='android.webkit.WebView' and @index='3']) + locatorType (xpath)
+11/07/2018 04:10:56 PM - TestStatus - ERROR: ### VERIFICATION FAILED -- CAR / VAN button verified's ERROR
+11/07/2018 04:10:56 PM - TestStatus - INFO: Screenshot save to directory: C:\Users\cromox\Desktop\newselenium\UDEMY\Motors_App\base\..\screenshots\20180711_161056_200761_CAR_/_VAN_button.png
+11/07/2018 04:10:56 PM - TestStatus - ERROR: test_1goto_MotorsMainUI was successful ### TEST FAILED
+11/07/2018 04:11:05 PM - MotorsBase - INFO: Element not found - locator (//*[@class='android.webkit.WebView' and @index='0']) + locatorType (xpath)
+11/07/2018 04:11:05 PM - MotorsBase - INFO: Element not present - locator (//*[@class='android.webkit.WebView' and @index='0']) + locatorType (xpath)
+11/07/2018 04:11:05 PM - MotorsBase - INFO: Element not found - locator (//*[@class='android.view.View' and @index='5']) + locatorType (xpath)
+11/07/2018 04:11:05 PM - MotorsBase - INFO: Element not present - locator (//*[@class='android.view.View' and @index='5']) + locatorType (xpath)
+11/07/2018 04:11:05 PM - MotorsBaseTests - INFO: test_2goto_MotorsSearch started

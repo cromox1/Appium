@@ -1,0 +1,116 @@
+PC-TALIBR2+cromox@PC-TALIBR2 /cygdrive/c/Users/cromox/Desktop/newselenium/UDEMY/Motors_Web
+$ py.test.exe -v -s tests/home/login_tests.py > consoleoutput1.txt 2>&1
+
+PC-TALIBR2+cromox@PC-TALIBR2 /cygdrive/c/Users/cromox/Desktop/newselenium/UDEMY/Motors_Web
+$ cat consoleoutput1.txt
+
+============================= test session starts =============================
+platform win32 -- Python 3.6.1, pytest-3.4.2, py-1.5.3, pluggy-0.6.0 -- c:\tools\python36\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.6.1', 'Platform': 'Windows-7-6.1.7601-SP1', 'Packages': {'pytest': '3.4.2', 'py': '1.5.3', 'pluggy': '0.6.0'}, 'Plugins': {'metadata': '1.7.0', 'html': '1.17.0'}, 'JAVA_HOME': 'C:\\Program Files\\Java\\jdk8u172'}
+rootdir: C:\Users\cromox\Desktop\newselenium\UDEMY\Motors_App, inifile:
+plugins: metadata-1.7.0, html-1.17.0
+collecting ... collected 2 items
+
+tests/motors/motors_base_tests.py::MotorsBaseTests::test_1goto_MotorsMainUI 
+
+== > RUNNING ONE TIME SETUP < ==
+
+
+Python Version = 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 18:41:36) [MSC v.1900 64 bit (AMD64)]
+
+DES_CAPS = {'platformName': 'Android', 'platformVersion': '6.0', 'deviceName': 'roslitest_NexusS_API_23'}
+
+
+
+EVERY TESTS SETUP
+
+
+--- > RUNNING METHOD LEVEL SETUP < ---
+
+
+Result 1  =  False
+Result 2  =  False
+
+FAILED
+
+--- > RUNNING METHOD LEVEL TEARDOWN < ---
+
+
+
+tests/motors/motors_base_tests.py::MotorsBaseTests::test_2goto_MotorsSearch 
+
+EVERY TESTS SETUP
+
+
+--- > RUNNING METHOD LEVEL SETUP < ---
+
+
+TEST 2 = test_2goto_MotorsSearch
+PASSED
+
+--- > RUNNING METHOD LEVEL TEARDOWN < ---
+
+
+
+
+== > RUNNING ONE TIME TEARDOWN < ==
+
+
+
+
+================================== FAILURES ===================================
+___________________ MotorsBaseTests.test_1goto_MotorsMainUI ___________________
+
+self = <tests.motors.motors_base_tests.MotorsBaseTests testMethod=test_1goto_MotorsMainUI>
+
+    @pytest.mark.run(order=1)
+    def test_1goto_MotorsMainUI(self):
+        self.log.info("test_1goto_MotorsMainUI started")
+        result = self.motorsbase.isElementPresent("//*[@class='android.view.View' and @index='8']", 'xpath')
+        self.tstatus.recordStatus(result, "Smart Search START button verified")
+        result = self.motorsbase.isElementPresent("//*[@class='android.webkit.WebView' and @index='3']", 'xpath')
+>       self.tstatus.recordStatus(result, "CAR / VAN button verified", True, "test_1goto_MotorsMainUI was successful")
+
+tests\motors\motors_base_tests.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+utilities\teststatus.py:80: in recordStatus
+    self.markFinal(FinalText, result, infoText)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <utilities.teststatus.TestStatus object at 0x0000000004281C18>
+testName = 'test_1goto_MotorsMainUI was successful', result = False
+resultMessage = 'CAR / VAN button verified'
+
+    def markFinal(self, testName, result, resultMessage):
+        """
+            Mark the final result of the verification point in a test case
+            This needs to be called at least once in a test case
+            This should be final test status of the test case
+            """
+        self.setResult(result, resultMessage)
+    
+        if "FAIL" in self.resultList:
+            self.log.error(testName +  " ### TEST FAILED")
+            self.resultList.clear()
+>           assert True == False
+E           AssertionError
+
+utilities\teststatus.py:63: AssertionError
+----------------------------- Captured log setup ------------------------------
+appium_driver.py            72 INFO     Element not found - locator (//*[@class='android.webkit.WebView' and @index='0']) + locatorType (xpath)
+appium_driver.py           163 INFO     Element not present - locator (//*[@class='android.webkit.WebView' and @index='0']) + locatorType (xpath)
+appium_driver.py            72 INFO     Element not found - locator (//*[@class='android.view.View' and @index='5']) + locatorType (xpath)
+appium_driver.py           163 INFO     Element not present - locator (//*[@class='android.view.View' and @index='5']) + locatorType (xpath)
+------------------------------ Captured log call ------------------------------
+motors_base_tests.py        35 INFO     test_1goto_MotorsMainUI started
+appium_driver.py            72 INFO     Element not found - locator (//*[@class='android.view.View' and @index='8']) + locatorType (xpath)
+appium_driver.py           163 INFO     Element not present - locator (//*[@class='android.view.View' and @index='8']) + locatorType (xpath)
+teststatus.py               34 ERROR    ### VERIFICATION FAILED -- Smart Search START button verified's ERROR
+appium_driver.py            38 INFO     Screenshot save to directory: C:\Users\cromox\Desktop\newselenium\UDEMY\Motors_App\base\..\screenshots\20180711_161055_477720_Smart_Search_START_button.png
+appium_driver.py            72 INFO     Element not found - locator (//*[@class='android.webkit.WebView' and @index='3']) + locatorType (xpath)
+appium_driver.py           163 INFO     Element not present - locator (//*[@class='android.webkit.WebView' and @index='3']) + locatorType (xpath)
+teststatus.py               34 ERROR    ### VERIFICATION FAILED -- CAR / VAN button verified's ERROR
+appium_driver.py            38 INFO     Screenshot save to directory: C:\Users\cromox\Desktop\newselenium\UDEMY\Motors_App\base\..\screenshots\20180711_161056_200761_CAR_/_VAN_button.png
+teststatus.py               61 ERROR    test_1goto_MotorsMainUI was successful ### TEST FAILED
+===================== 1 failed, 1 passed in 26.80 seconds =====================

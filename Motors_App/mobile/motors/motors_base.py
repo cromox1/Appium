@@ -16,19 +16,19 @@ class MotorsBase(BaseHome):
     def motorsBaseParameters(self, installed=True):
         desired_caps_app = {}
         if installed is not True:
-            # Returns abs path relative to this file and not cwd
-            desired_caps_app['app'] = os.path.abspath(os.path.join(os.path.dirname(__file__),'apps/ChessFree.apk'))
-        desired_caps_app['appPackage'] = 'uk.co.aifactory.chessfree'
-        desired_caps_app['appActivity'] = '.ChessFreeActivity'
+            desired_caps_app['app'] = os.path.abspath(os.path.join(os.path.dirname(__file__),'apps/motors.activities_2018-03-12.apk'))
+        desired_caps_app['appPackage'] = 'com.motors.activities'
+        desired_caps_app['appActivity'] = '.MainActivity'
         return desired_caps_app
 
     def gotoMotors(self):
-        "Test the Chess app launches correctly, click Play button and go to Settings"
-        self.continueButton("uk.co.aifactory.chessfree:id/YesButton")
-        self.continueButton("uk.co.aifactory.chessfree:id/ButtonPlay")
-        self.continueButton("uk.co.aifactory.chessfree:id/CrossProm_ExitButton")
+        "Test the Motors app launches correctly, click Start button"
+        self.continueButton("//*[@class='android.webkit.WebView' and @index='0']", "xpath")
+        self.continueButton("//*[@class='android.view.View' and @index='5']", "xpath")
+        # self.continueButton("start", "name")
+        # self.continueButton("com.motors.activities:id/CrossProm_ExitButton")
         # sleep(2)
 
-    def continueButton(self, locatorid):
-        if self.isElementPresent(locatorid) == True:
-            self.elementClick(locatorid)
+    def continueButton(self, locator, locatorType='id'):
+        if self.isElementPresent(locator, locatorType) == True:
+            self.elementClick(locator, locatorType)

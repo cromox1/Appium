@@ -1,0 +1,124 @@
+A) TO INSTALL APPPIUM + COMPONENTS (MOBILE APPS + ETC..) & START
+
+1) check pip - to make sure python version
+
+$ pip3 --version
+pip 10.0.1 from c:\tools\python36\lib\site-packages\pip (python 3.6)
+
+2) Pip install iPython, Appium-Client-Server, npm, node, pytest, selenium
+
+$ pip3 install nodejs
+.....
+Successfully installed nodejs-0.1.1 optional-django-0.1.0
+
+$ pip3 list | grep -i python
+Appium-Python-Client   0.26
+ipython                6.2.1
+ipython-genutils       0.2.0
+python-dateutil        2.6.1
+
+$ pip3 install npm
+.....
+Successfully installed npm-0.1.1
+
+$ pip3 install node
+.....
+Successfully installed node-0.9.22
+
+$ pip3 list | grep -i appium
+Appium-Python-Client   0.26
+
+$ pip3 list | grep -i test
+pytest                 3.4.2
+pytest-html            1.17.0
+pytest-metadata        1.7.0
+
+3) Install and Setup Appium 1.7.2 or any Non-GUI version of Appium (on Windows 7)
+
+http://www.automationtestinghub.com/download-and-install-appium-1-6/
+
+3.1) Install Node.js
+
+3.2) go to Node.js command prompt then run this command
+
+npm install -g appium
+
+OR
+
+npm install -g appium@1.7.2  (for specific version)
+
+3.2.1) check appium version
+
+appium -v
+
+(should show the version that been install)
+
+3.3) Starting Appium Server form command prompt
+
+(from Node.js command prompt)
+
+appium
+
+(if you want appium on specific server and port)
+
+appium -a 127.0.0.1 -p 4723
+
+3.4) Stopping the Appium server
+
+In the Node.js prompt windows, press Ctrl-C
+this will show the Terminate batch job (Y/N)
+
+Press 'Y' and then hit Enter. This will stop Appium server
+
+4) OR - Install Appium with GUI
+
+4.1) Download Appium Desktop App - https://github.com/appium/appium-desktop/releases/latest
+
+Then install the appium-desktop-setup-x.x.x.exe
+
+- When run Appium icon, it will give GUI with 'Start Server' button & also have 'Stop' button to stop if 'Start'
+
+5) Download Android Studio - https://developer.android.com/studio/
+
+(then install)
+
+(IMPORTANT - need Java JDK to make it working fine - Android Studio use Eclipse + JDK to compile the Virtual Device)
+
+(after completed - Start)
+
+after Andoid Studio started fine, start the Android Virtual Device (AVD) Manager
+
+- to start AVD Manager, click on the link / icon whihc look like a door (or phone device) with Android's robot in-fron it
+
+6) Create an emulator with the preferences you need and launch it using the start button
+
+(note - some of the devices, you need to download, & then compile the images)
+
+7) launch the emulator (using Start button)
+
+(after the emulator start, you can stop/close Android Studio / Eclipse 
+
+8) Start Appium server
+
+
+NOTE INFOS
+----------
+
+--- > C:\Users\cromox\AppData\Local\Android\Sdk\build-tools\28.0.0
+
+
+C:\Windows\System32>java -version
+java version "1.8.0_51"
+Java(TM) SE Runtime Environment (build 1.8.0_51-b16)
+Java HotSpot(TM) 64-Bit Server VM (build 25.51-b03, mixed mode)
+
+
+B) TO RUN TESTS
+
+1) Start Android Studio - then go to AVD Manager & click - then start your created emulator Mobile
+( After your emulator mobile successfully start (mobile screen with all the apps & side bar appear, you can close Android Studio and leave only the emulator running )
+2) Start Appium server
+3) Set ANDROID_HOME environment
+
+
+

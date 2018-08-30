@@ -23,22 +23,26 @@ class ScreenDriverFactory():
 
     def mobileDeviceParameter(self, device):
         self.desired_caps = {}
-        if device == 'test1' or device == 'Nexus S API 23' or device == 'default' or device is None:
+        if device == 'test1' or device == 'Pixel API 27' or device == 'default' or device is None:
+            self.desired_caps['platformName'] = 'Android'
+            self.desired_caps['platformVersion'] = '8.1'
+            self.desired_caps['deviceName'] = 'rosli_Pixel_API_27'
+        elif device == 'test2' or device == 'Nexus S API 23':
             self.desired_caps['platformName'] = 'Android'
             self.desired_caps['platformVersion'] = '6.0'
             self.desired_caps['deviceName'] = 'roslitest_NexusS_API_23'
-        elif device == 'test2' or device == 'Galaxy Nexus API 23' or device == 'galaxy':
+        elif device == 'test3' or device == 'Galaxy Nexus API 23' or device == 'galaxy':
             self.desired_caps['platformName'] = 'Android'
             self.desired_caps['platformVersion'] = '6.0'
             self.desired_caps['deviceName'] = 'roslitest2_Galaxy_Nexus_API_23'
-        elif device == 'test3' or device == 'Nexus 6 API 27' or device == 'nexus6':
+        elif device == 'test4' or device == 'Nexus 6 API 27' or device == 'nexus6':
             self.desired_caps['platformName'] = 'Android'
             self.desired_caps['platformVersion'] = '8.1'
             self.desired_caps['deviceName'] = 'rosli3_Nexus_6_API_27'
         else:
             self.desired_caps['platformName'] = 'Android'
-            self.desired_caps['platformVersion'] = '6.0'
-            self.desired_caps['deviceName'] = 'roslitest_NexusS_API_23'
+            self.desired_caps['platformVersion'] = '8.1'
+            self.desired_caps['deviceName'] = 'rosli_Pixel_API_27'
         print('\nDES_CAPS = ' + str(self.desired_caps) + '\n')
         return self.desired_caps
 
@@ -64,4 +68,3 @@ class ScreenDriverFactory():
     def driverAppiumRemote(self, desired_caps):
         appium_server_port = 'localhost:4723'
         return webdriverappium.Remote('http://' + appium_server_port + '/wd/hub', desired_caps)
-
